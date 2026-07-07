@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+    </head>
+    <body>
+
+       
+
+    
+        <div class="container">
+
+        <br />
+
+        <a class="btn btn-primary" href="/Home/Create">Create Record</a>
+
+        <hr />
+
+        <table class="table table-responsive table-bordered">
+                <thead >
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Dob</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach(var i in Model)
+                    {
+                        <tr>
+                            <td>@i.Name</td>
+                            <td>@i.Email</td>
+                            <td>@i.Dob</td>
+                            <td>
+                                <a class="btn btn-warning" href="/Home/Edit/@i.Id">Edit</a>
+                            </td>
+                        <td>
+                            <a class="btn btn-danger" href="/Home/Delete/@i.Id">Delete</a>
+                        </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+
+        </div>
+       
+    </body>
+    </html>
