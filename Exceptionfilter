@@ -1,0 +1,15 @@
+using Microsoft.AspNetCore.Diagnostics;
+
+namespace Studentdet.Filters
+{
+    public class Exceptionfilter : IExceptionHandler
+    {
+        public ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
+        {
+           httpContext.Response.Redirect("/error/show");
+            return new ValueTask<bool>(true);
+
+
+        }
+    }
+}
