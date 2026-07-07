@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+    </head>
+    <body>
+
+      
+
+    
+        <div class="container">
+
+         <form method="post" action="/Home/Edit">
+            <table class="table table-responsive table-bordered">
+
+                <tr>
+                    <td colspan="2">
+                        <input name="Id" type="hidden" value="@Model.Id"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="Name" value="@Model.Name" /></td>
+                </tr>
+                <tr>
+                    <td>Eamil</td>
+                    <td><input type="email" name="Email" value="@Model.Email" /></td>
+                </tr>
+                <tr>
+                    <td>Date of birth</td>
+                    <td><input type="date" name="Dob" value="@Model.Dob" /></td>
+                </tr>
+
+               <tr >
+                    <td>
+                        <button class="btn btn-primary">Update Student</button>
+                    </td>
+               </tr>
+
+            </table>
+         </form>
+       
+
+        </div>
+       
+    </body>
+    </html>
